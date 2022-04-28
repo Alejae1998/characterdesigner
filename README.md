@@ -16,6 +16,13 @@
 https://alchemycodelab.github.io/web-01-character-designer/
 
 ## Getting Started
+# My plan:
+1. update the background image with javaScript and CSS
+2. use the for/of loop 
+3. check the inspect of my browser 
+4. follow the steps of the rubric
+5. commit and push every change
+6. deploy on netify
 
 User [this repository](https://github.com/alchemycodelab/half-baked-web-01-character-designer) as a template for this deliverable.
 
