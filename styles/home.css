@@ -1,1 +1,17 @@
 /* add home page styles here */
+#head1 {
+  height: 100px;
+  width: 100px;
+  background-image: url(`../assets/bird-head.png);
+}
+#middle1 {
+  height: 100px;
+  width: 100px;
+  background-image: url(`../assets/);
+}
+
+#bottom1 {
+  height: 100px;
+  width: 100px;
+  background-image: url(`../assets);
+}
