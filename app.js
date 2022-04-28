@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-console */
 // import functions and grab DOM elements
 const headDropdown = document.getElementById('head-dropdown');
 const middleDropdown = document.getElementById('middle-dropdown');
@@ -23,13 +25,6 @@ headDropdown.addEventListener('change', () => {
     headDiv.style = `background-image: url('./assets/${headDropdown.value}-head.png`;
     head++;
     displayStats();
-  // get the value of the head dropdown
-
-  // increment the head change count state
-
-  // update the dom for the head (use style.backgroundImage on the headEl div instead of trying to set the .src -- it's NOT an img tag!)
-
-  // update the stats to show the new count (call displayStats() to do this work)
 });
 
 middleDropdown.addEventListener('change', () => {
@@ -51,28 +46,24 @@ bottomDropdown.addEventListener('change', () => {
 catchphraseButton.addEventListener('click', () => {
     catchphrase.push(catchphraseInput.value);
     displayCatchphrases();
-  // get the value of the catchphrase input
-  // push the new catchphrase to the catchphrase array in state
-  // clear out the form input's value so it's empty to the user
-  // update the dom to show the new catchphrases (refactor to/call displayCatchphrases to do this work)
 });
 
 function displayStats() {
     reportEl.textContent = `You have change the head ${head} times , middle ${middle} times , bottom ${bottom} times`;
-  // text content of the reportEl to tell the user how many times they've changed each piece of the state
 }
 
-function displayCatchphrases() { 
+function displayCatchphrases() {
+    const catchphraseList = document.getElementById('catchphrase-list'); 
+    catchphraseList.textContent = '';
     for (let phrase of catchphrase) {
-        if (catchphrase[phrase]) {
-            return phrase;
-        } console.log(phrase);
-        catchphrasesEl.textContent = phrase;
+        const li = document.createElement('li');
+        li.textContent = phrase;
+        catchphraseList.append(li);
     }
-
-  // clear out the DOM for the currently displayed catchphrases
-  // loop through each catchphrase in state
-  // and for each catchphrase
-  // create an HTML element with the catchphrase as its text content
-  // and append that HTML element to the cleared-out DOM
+    // for (let phrase of catchphrase) {
+    //     if (catchphrase[phrase]) {
+    //         return phrase;
+    //     } console.log(phrase);
+    //     catchphrasesEl.textContent = phrase;
+    // }
 }
